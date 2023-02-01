@@ -1,0 +1,48 @@
+# Create a magic 8 Ball program.
+#                                         Objectives
+# Create a tool that will take a question as an input and do the following:
+# Wait 5 seconds
+# Give updates to user
+# Implement wait of .5 second between 10  .'s
+# Wait 1 second
+# Use series of if elif statements to get an output.
+# 9 different responses.
+# Setup
+
+import random
+import time
+
+number = random.randint (1, 9)
+
+# User Question
+input("Ask the magic 8 ball a question: ")
+time.sleep(5)                                          # Wait
+
+# Updates to user
+print("Searching for an answer.")
+print("Please be patient.")
+
+# Dots
+for eachPass in range(1, 10):
+    print(".",end=""), time.sleep(.5)
+time.sleep(1)                                          # Wait
+
+# Responses
+if number == 1:
+    print("\nVery doubtful.")
+elif number == 2:
+    print("\nOutlook not so good.")
+elif number == 3:
+    print("\nReply hazy, try again.")
+elif number == 4:
+    print("\nBetter not tell you now.")
+elif number == 5:
+    print("\nYes.")
+elif number == 6:
+    print("\nMost likely.")
+elif number == 7:
+    print("\nIt is decidedly so.")
+elif number == 8:
+    print("\nMy reply is no.")
+elif number == 9:
+    print("\nConcentrate and ask again.")
